@@ -1,0 +1,271 @@
+@import "tailwindcss";
+:root{
+    --cursor-border:gray;
+    --point-color:purple;
+    --bg-dark:#0F0715;
+    --logo-dark:url('./assets/images/logodark.png');
+    --text-dark:#DDD;
+    --shadow-dark: 0 4px 6px -1px rgba(53, 3, 92, 0.298), 0 2px 4px -1px rgba(53, 3, 92, 0.366);
+    --header-dark:#1b0d26;
+    --gradient-dark: linear-gradient(
+    180deg, 
+    #2d163e 0%, 
+    #1b0d26 100%
+  );
+   --gradient-dark2: linear-gradient(
+    180deg, 
+    #3a1c4e 0%, 
+    #1b0d26 100% 
+  );
+
+--dark-hover:white;
+--nav-bg-dark:#2d163e;
+--neon-shadow:0 0 10px 5px #ff00ff, 0 0 20px 10px #ff00ff80;
+--neon-shadow2:0 0 5px 5px rgba(74, 10, 74, 0.14), 0 0 10px 2px #ff00ff47;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text-dark);
+
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+@font-face {
+    font-family: bricolage;
+    src: url(./assets//fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+}
+body{
+background-color: var(--bg-dark) !important;
+font-family: bricolage, sans-serif !important;
+}
+.cursor{
+    height: 32px;
+    width: 32px;
+    border: 1px solid var(--cursor-border) !important;
+}
+.point{
+    background-color: var(--point-color) !important;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: translate(50%,-50%);
+}
+header{
+    background-color: var(--header-dark);
+    width: 96%;
+    margin: auto;
+    height: 80px !important;
+    box-shadow:var(--shadow-dark)!important ;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-radius: 2rem;
+}
+.logo{
+    content: var(--logo-dark);
+    width: 50px;
+    height: 50px;
+}
+header h1{
+    color: var(--text-dark);
+    font-size: 25px;
+}
+nav ul li{
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+}
+nav ul li:hover{
+    cursor: pointer;
+    color: var(--dark-hover);
+    transition: all 0.3s ease-in-out;}
+.letstalk{
+    padding: 0.6rem 2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-image: var(--gradient-dark)
+}
+
+.themebtn{
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: var(--gradient-dark);
+}
+.active{
+    border: 1px solid var(--cursor-border);
+    color: var(--dark-hover);
+}
+
+@media  (max-width:700px) {
+    .nav-links{
+    background-color: var(--nav-bg-dark);
+    font-size: 1.5rem;
+    border: none;
+    width: 100%;
+}
+.nav-links ul{
+    width: 100%;
+    gap: 1.5rem;
+}
+.nav-links ul li{
+    background: var(--gradient-dark);
+border: none;
+    width: 80%;
+    border-radius: 0;
+    margin: auto;
+}
+
+}
+
+@media (max-width:320px) {
+    header{
+    padding:0 0.7rem;
+    width: 100%;
+    }
+}
+.firstgrid{
+    margin: 3rem auto;
+    padding: 0.5rem;
+}
+#circle{
+    background-color: var(--bg-dark);
+    /* border: 4px solid var(--point-color); */
+
+     
+}
+.hero{
+    background-image: var(--gradient-dark) !important;
+}
+.glow-border {
+  /* Ensure 3D transformations work correctly */
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-out; /* Match the transition in React */
+  background-color: var(--bg-dark);
+  /* Your existing glow styles go here */
+  border-radius: 50%;
+  box-shadow: var(--neon-shadow);
+ 
+}
+.resume{
+    background-image: var(--gradient-dark);
+    padding: 1rem;
+}
+.skills{
+    background-image: var(--gradient-dark);
+    height: 100%;
+    
+}
+.skill-heading{
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+.skills-text{
+    padding:2rem 0rem;
+
+}
+.skills-text span{
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--point-color);
+    border-radius: 3rem ;
+}
+.social{
+     background-image: var(--gradient-dark);
+    height: 100%;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.resumeBtns button, .resumeBtns a{
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-image: var(--gradient-dark2);
+    
+}
+
+.service-container{
+    margin: auto;
+    padding: 0.5rem;
+}
+.service{
+    padding: 1rem;
+}
+.service-title{
+    margin-bottom: 2rem;
+}
+.service-title h1 span ,.learnmore{
+    color: #ff00ff;
+}
+.learnmore:hover{
+    cursor: pointer;
+}
+.service-title button{
+    padding: 0.5rem 3rem;
+    border-radius: 2rem;
+    background-image:var(--gradient-dark2);
+    transition: all 0.3s ease;
+    align-self: flex-end;
+   justify-self: end;
+}
+.service-title button:hover{
+    cursor: pointer;
+    scale: 0.95;
+}
+.service-cards div{
+    background-image: var(--gradient-dark2);
+    padding: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+.service-cards div h2{
+    font-weight: bold;
+}
+.projects{
+    background-image: var(--gradient-dark);
+    min-height: 100vh;
+    height: auto;
+    width: 94%;
+    margin: auto;
+    padding: 2rem;
+}
+.project-card{
+    box-shadow: var(--neon-shadow2)!important;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+.title,.tags{
+    padding: 1rem;
+}
+.tags span{
+    padding: 0.5rem 1rem;
+    background-color:#ff00ff ;
+    border-radius: 2rem;
+}
+.project-card .images{
+    filter: grayscale(30);
+    transition: all 0.3s ease;
+}
+.project-card:hover .images{
+    filter: grayscale(0);
+    
+}
+.images img{
+    transition: all 0.3s ease;
+
+}
+.images:hover img{
+     transform: scale(1.1) translate(5px, 5px);
+}
+.project-cardBtn{
+    padding:1rem;
+    background-image: var(--gradient-dark2);
+    border-radius: 2rem;
+}
