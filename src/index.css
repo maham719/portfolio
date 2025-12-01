@@ -48,6 +48,7 @@ font-family: bricolage, sans-serif !important;
     width: 32px;
     border: 1px solid var(--cursor-border) !important;
     pointer-events: none;
+    transform: translate(-50%, -50%);
 }
 
 .point{
