@@ -47,6 +47,7 @@ font-family: bricolage, sans-serif !important;
     height: 32px;
     width: 32px;
     border: 1px solid var(--cursor-border) !important;
+    pointer-events: none;
 }
 .point{
     background-color: var(--point-color) !important;
